@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'pathelloworld', url: 'https://github.com/SidduGogi/college.git', branch: 'main'
+                git url: 'https://github.com/SidduGogi/college.git', branch: 'main'
             }
         }
 
