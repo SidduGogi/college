@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git url: 'https://github.com/SidduGogi/college.git', branch: 'main'
+                git credentialId : 'pathelloworld' url: 'https://github.com/SidduGogi/college.git', branch: 'main'
             }
         }
 
@@ -15,7 +15,7 @@ pipeline {
                     call venv\\Scripts\\activate
                     pip install --upgrade pip
                     pip install -r requirement.txt
-                '''
+                    '''
             }
         }
 
